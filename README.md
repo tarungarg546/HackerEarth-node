@@ -31,8 +31,11 @@ config.source='';  //your source code for which you want to use hackerEarth api
 config.input="";  //input against which you have to test your source code
 config.language="C/C++/Py/C#"; //optional choose any one of them or none
 
-//Compile your Source Code
+```
+#Compile Your code
 
+```
+//compile your code 
 hackerEarth.compile(config,function(err,response){
       if(err)
         res.send(err);
@@ -40,7 +43,12 @@ hackerEarth.compile(config,function(err,response){
         //deal with response
         console.log(JSON.parse(res).compile_status);  //you can use it in your own way
 });
-var FilePath="";//path from where you have to take source code
+
+
+//Compile with file input 
+
+
+var FilePath=""; //path from where you have to take source code
 //compile a file input
 hackerEarth.compileWithFile(config,FilePath,function(err,response){
       if(err)
@@ -49,7 +57,11 @@ hackerEarth.compileWithFile(config,FilePath,function(err,response){
         //deal with response
         console.log(JSON.parse(res).compile_status);  //you can use it in your own way
 });
+```
 
+#Run Your Code
+
+```
 //Run a source code against a input
 
 hackerEarth.run(config,function(err,response){
@@ -59,6 +71,7 @@ hackerEarth.run(config,function(err,response){
         //deal with response
         console.log(JSON.parse(res).run_status);  //you can use it in your own way
 });
+
 
 //run a source code against a file input
 
