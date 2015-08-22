@@ -1,0 +1,32 @@
+{
+  "name": "hackerearth-node",
+  "version": "0.0.1",
+  "description": "nodeJS library for using HackerEarth API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tarungarg546/HackerEarth-node.git"
+  },
+  "keywords": [
+    "HackerEarth",
+    "HE",
+    "Online",
+    "compiler",
+    "Compiler",
+    "Online",
+    "Hacker",
+    "APi"
+  ],
+  "author": "Tarun Garg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tarungarg546/HackerEarth-node/issues"
+  },
+  "homepage": "https://github.com/tarungarg546/HackerEarth-node",
+  "dependencies": {
+    "request": "^2.61.0"
+  }
+}
