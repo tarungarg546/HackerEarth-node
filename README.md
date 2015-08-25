@@ -1,11 +1,8 @@
 # HackerEarth-node
 nodeJS library for using HackerEarth API
 
-<<<<<<< HEAD
 This library helps you to compile your code with [HackerEarth API v3](https://www.hackerearth.com/docs/api/developers/code/legacy/)
-=======
 This library helps you to compile your code with [HackerEarth API v3!] (https://www.hackerearth.com/docs/api/developers/code/v3/)
->>>>>>> 8f8a04f2f373b3a77ce461c11334ef37ffc3dabc
 
 Using HackerEarth API you can compile and run your code using their [codeTable](https://code.hackerEarth.com)
 
