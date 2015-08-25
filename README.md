@@ -1,19 +1,19 @@
 # HackerEarth-node
 nodeJS library for using HackerEarth API
 
-This library helps you to compile your code with [HackerEarth API v3!] (https://www.hackerearth.com/docs/api/developers/code/legacy/)
+This library helps you to compile your code with [HackerEarth API v3](https://www.hackerearth.com/docs/api/developers/code/legacy/)
 
-Using HackerEarth API you can compile and run your code using their [codeTable!](https://code.hackerEarth.com)
+Using HackerEarth API you can compile and run your code using their [codeTable](https://code.hackerEarth.com)
 
-#PreRequisite
+<h2>PreRequisite</h2>
 
 You have to obtain your client secret key from [HackerEarth Here](http://www.hackerearth.com/api/register/) and voila you are done!
 
-#Install
+<h2>Install</h2>
 
 >npm install hackerearth-node
 
-#Set Up
+<h1>Set Up</h1>
 
 ```
 var hackerEarth=require('hackerearth-node'); //require the Library
@@ -32,7 +32,7 @@ config.input="";  //input against which you have to test your source code
 config.language="C/C++/Py/C#"; //optional choose any one of them or none
 
 ```
-#Compile Your code
+<h1>Compile Your code</h1>
 
 ```
 //compile your code 
@@ -59,7 +59,7 @@ hackerEarth.compileWithFile(config,FilePath,function(err,response){
 });
 ```
 
-#Run Your Code
+<h1>Run Your Code</h1>
 
 ```
 //Run a source code against a input

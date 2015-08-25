@@ -14,16 +14,12 @@ var hackerEarth=function(client_secret,mode,time_limit,memory_limit){
 };
 hackerEarth.prototype.compile=function(config,callback){
 	this.lang=helpers.getLanguage(config.language);
-
 	this.time_limit=config.time_limit||1;
 	this.memory_limit=config.memory_limit||262144;
 	this.source=config.source||" ";
 	this.input=config.input||" ";
-	console.log(this);
 	var data=helpers.getQueryString(this);
-	console.log(data);
 	request.post({url:this.compile_url,form:data},function(err,httpResponse,responseBody){
-		console.log(responseBody);
 		if(err)
 			callback(err , null);
 		else
@@ -62,7 +58,7 @@ hackerEarth.prototype.compileWithFile=function(config,filePath,callback){
     var extension=ext[ext.length - 1];
 	this.lang=config.language?helpers.getLanguage(config.language):helpers.getLanguage(extension);
 	this.source=fs.readFileSync(filePath,'utf8');
-	console.log(this.source);
+	//console.log(this.source);
 	this.input=config.input||" ";
 	var data=helpers.getQueryString(this);
 	request.post({url:this.compile_url,form:data},function(err,httpResponse,responseBody){
