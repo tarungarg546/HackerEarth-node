@@ -1,0 +1,7 @@
+{ 
+	"preset": "google",
+	"maximumLineLength": 200,
+	"validateQuoteMarks": false,
+	"validateIndentation": 4,
+	"requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties"
+}
