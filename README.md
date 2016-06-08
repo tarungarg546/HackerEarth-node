@@ -7,8 +7,8 @@ This library helps you to compile your code with [HackerEarth API v3!] (https://
 Using HackerEarth API you can compile and run your code using their [codeTable](https://code.hackerEarth.com)
 
 <h2>PreRequisite</h2>
-
-You have to obtain your client secret key from [HackerEarth Here](http://www.hackerearth.com/api/register/) and voila you are done!
+ - Make sure you are using latest version of nodeJS.
+ - You have to obtain your client secret key from [HackerEarth Here](http://www.hackerearth.com/api/register/) and voila you are done!
 
 <h2>Install</h2>
 
@@ -21,9 +21,7 @@ var hackerEarth=require('hackerearth-node'); //require the Library
 //Now set your application 
 var hackerEarth=new hackerEarth(
                                 '**********',  //Your Client Secret Key here this is mandatory
-                                '',  //mode sync or async(optional) async is by default and preferred for nodeJS
-                                '',  //time_limit (optional)
-                                '',  //memory_limit(optional)
+                                ''  //mode sync or async(optional) async is by default and preferred for nodeJS
 );
 var config={};
 config.time_limit=1;  //your time limit in integer

@@ -4,6 +4,7 @@
   "description": "nodeJS library for using HackerEarth API",
   "main": "index.js",
   "scripts": {
+    "lint": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,5 +29,14 @@
   "homepage": "https://github.com/tarungarg546/HackerEarth-node",
   "dependencies": {
     "request": "^2.61.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jscs": "^3.0.2",
+    "gulp-jscs-stylish": "^1.4.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-notify-growl": "^1.0.2",
+    "jshint-stylish": "^2.2.0"
   }
 }
