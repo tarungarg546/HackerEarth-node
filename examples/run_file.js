@@ -15,6 +15,7 @@ config.memory_limit = 323244;
 
 config.input = "5";
 
+const FilePath = "Your Path";
 hackerEarth.runWithFile(config, FilePath, (err, res) => {
     if (err) {
         console.log(err);

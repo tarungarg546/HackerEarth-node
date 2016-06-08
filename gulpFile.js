@@ -1,34 +1,33 @@
+"use strict";
 const gulp = require('gulp');
 const notify = require('gulp-notify');
 const growl = require('gulp-notify-growl');
 const jscs = require('gulp-jscs');
 const jshint = require('gulp-jshint');
-
-gulp.task('jscs', function() {
-    gulp.src([ 'examples/*.js,hackerEarth-js/*.js,*.js'])
-        .pipe(jscs())
-        .pipe(notify({
-            title: 'JSCS',
-            message: 'JSCS Passed. Let it fly!'
-        }));
+const map = require('map-stream');
+let exitOnJshintError = map( (file, cb) => {
+    //console.log("here for file "+file.path);
+    if (!file.jshint.success) {
+        console.error('jshint failed for '+file.path);
+        process.exit(1);
+    }
+});
+gulp.task('jscs', () => {
+    gulp.src([ '*.js',"examples/*.js","hackerEarth-js/*.js"])
+        .pipe(jscs());
 });
 
-gulp.task('lint', function() {
-    gulp.src([ 'examples/*.js,hackerEarth-js/*.js,*.js'])
-        .pipe(jshint('.jshintrc'))
+gulp.task('lint', () => {
+    gulp.src([ '*.js',"examples/*.js","hackerEarth-js/*.js"])
+        .pipe(jshint())
         .pipe(jshint.reporter('jshint-stylish'))
-        .pipe(jshint.reporter('fail'))
-        .pipe(notify({
-            title: 'JSHint',
-            message: 'JSHint Passed. Let it fly!',
-        }))
+        .pipe(jshint.reporter("fail"));   
 });
 
-gulp.task('build', ['jscs', 'lint'], function() {
+gulp.task('build', ['jscs', 'lint'], () => {
     gulp.src('/')
-        //pipe through other tasks such as sass or coffee compile tasks
         .pipe(notify({
             title: 'Task Builder',
             message: 'Successfully built application'
-        }))
+        }));
 });
