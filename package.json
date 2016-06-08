@@ -1,6 +1,6 @@
 {
   "name": "hackerearth-node",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "nodeJS library for using HackerEarth API",
   "main": "index.js",
   "scripts": {
