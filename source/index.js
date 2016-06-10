@@ -12,13 +12,13 @@ class helpers {
             client_secret:clientSecret,
             async:mode,
             source:source,
-            lang:this.getLanuage(),
+            lang:this.getLanuage(language),
             time_limit:time_limit||1,
             memory_limit:memory_limit||262144
         }
         return obj;
     }
-    getLanuage() {
+    getLanuage(language) {
         let lang;
         if (language === 'C++') {
             lang = 'CPP';
