@@ -38,15 +38,15 @@ class helpers {
         return {
             method: 'POST',
             uri: url,
-            body: data,
-            json: true
+            form: data,
+            gzip: true
         }
     }
 
     doOperation(rpData,callback) {
         rp(rpData)
             .then((body) => {
-                return body.json();
+                return body;
             })
             .then((res) => {
                 callback(null,res);
@@ -60,12 +60,12 @@ class helpers {
 
 class HackerEarth extends helpers {
     constructor(clientSecret, mode) {
-        super();
-        debug('Bootstraping HackerEarth module with clientSecret as %s and mode as %s', clientSecret,mode);  
+        super();  
         this._runURL = 'https://api.hackerearth.com/v3/code/run/';
         this._compileURL = 'https://api.hackerearth.com/v3/code/compile/';
         this._clientSecret = clientSecret;
         this._mode = mode || 0;
+        debug('Bootstraping HackerEarth module with clientSecret as %s and mode as %s', clientSecret,mode);
     }
 
     get runURL() {
@@ -84,13 +84,14 @@ class HackerEarth extends helpers {
         return this._mode;
     }
     compile(config, callback) {
-        let data = super.getQueryData(config,this.clientSecret,this.compileURL,this.mode);
+        let data = super.getQueryData(config,this.clientSecret,this.mode);
         let rpData=super.getRequestPostJSON(data,this.compileURL);
+        super.doOperation(rpData,callback);
         debug("In HackerEarth:Compile Data sent to API is %s",JSON.stringify(data));    
     }
 
     run(config, callback) {
-        let data = super.getQueryData(config,this.clientSecret,this.runURL,this.mode);
+        let data = super.getQueryData(config,this.clientSecret,this.mode);
         let rpData=super.getRequestPostJSON(data,this.runURL);
         super.doOperation(rpData,callback);
         debug("In HackerEarth:Run Data sent to API is %s",JSON.stringify(data));
