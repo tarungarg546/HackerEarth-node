@@ -64,3 +64,11 @@ hackerEarth.run(config,function(err,response){
 - [x] Use ES6 in source and transpile to babel for older version and put it into distribution/
 - [ ] Promisify whole package
 - [ ] Using travis build tools for testing
+
+<h2> Contact me on</h2>
+  [![Twitter][1.1]][1]
+  [![Facebook][2.1]][2]
+  [1.1]: http://i.imgur.com/tXSoThF.png 
+  [2.1]: http://i.imgur.com/P3YfQoD.png
+  [1]: http://www.twitter.com/Tarun_Garg2
+  [2]: http://www.facebook.com/tarungarg546
