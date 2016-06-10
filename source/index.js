@@ -16,7 +16,7 @@ class helpers {
             input:input,
             time_limit:time_limit||1,
             memory_limit:memory_limit||262144
-        }
+        };
         return obj;
     }
     getLanuage(language) {
@@ -41,7 +41,7 @@ class helpers {
             uri: url,
             form: data,
             gzip: true
-        }
+        };
     }
 
     doOperation(rpData,callback) {
@@ -57,7 +57,7 @@ class helpers {
             });
     }
 
-};
+}
 
 class HackerEarth extends helpers {
     constructor(clientSecret, mode) {
@@ -97,6 +97,6 @@ class HackerEarth extends helpers {
         super.doOperation(rpData,callback);
         debug("In HackerEarth:Run Data sent to API is %s",JSON.stringify(data));
     }
-};
+}
 
 module.exports = HackerEarth;

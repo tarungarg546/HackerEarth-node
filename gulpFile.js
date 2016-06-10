@@ -13,12 +13,12 @@ let exitOnJshintError = map( (file, cb) => {
     }
 });
 gulp.task('jscs', () => {
-    gulp.src([ '*.js',"examples/*.js","hackerEarth-js/*.js"])
+    gulp.src([ '*.js',"examples/*.js","source/*.js"])
         .pipe(jscs());
 });
 
 gulp.task('lint', () => {
-    gulp.src([ '*.js',"examples/*.js","hackerEarth-js/*.js"])
+    gulp.src([ '*.js',"examples/*.js","source/*.js"])
         .pipe(jshint())
         .pipe(jshint.reporter('jshint-stylish'))
         .pipe(jshint.reporter("fail"));   
