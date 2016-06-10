@@ -44,19 +44,6 @@ hackerEarth.compile(config,function(err,response){
 });
 
 
-//Compile with file input 
-
-
-var FilePath=""; //path from where you have to take source code
-//compile a file input
-hackerEarth.compileWithFile(config,FilePath,function(err,response){
-      if(err)
-        res.send(err);
-      else
-        //deal with response
-        console.log(JSON.parse(res).compile_status);  //you can use it in your own way
-});
-```
 
 <h1>Run Your Code</h1>
 
@@ -71,14 +58,4 @@ hackerEarth.run(config,function(err,response){
         console.log(JSON.parse(res).run_status);  //you can use it in your own way
 });
 
-
-//run a source code against a file input
-
-hackerEarth.runWithFile(config,FilePath,function(err,response){
-      if(err)
-        res.send(err);
-      else
-        //deal with response
-        console.log(JSON.parse(res).compile_status);  //you can use it in your own way
-});
 ```
