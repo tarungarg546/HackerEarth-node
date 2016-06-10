@@ -13,6 +13,7 @@ class helpers {
             async:mode,
             source:source,
             lang:this.getLanuage(language),
+            input:input,
             time_limit:time_limit||1,
             memory_limit:memory_limit||262144
         }
