@@ -24,7 +24,7 @@ gulp.task('lint', () => {
         .pipe(jshint.reporter("fail"));   
 });
 
-gulp.task('build', ['jscs', 'lint'], () => {
+gulp.task('check', ['jscs', 'lint'], () => {
     gulp.src('/')
         .pipe(notify({
             title: 'Task Builder',
