@@ -21,7 +21,7 @@ var hackerEarth=require('hackerearth-node'); //require the Library
 //Now set your application 
 var hackerEarth=new hackerEarth(
                                 '**********',  //Your Client Secret Key here this is mandatory
-                                ''  //mode sync or async(optional) async is by default and preferred for nodeJS
+                                ''  //mode sync=1 or async(optional)=0 or null async is by default and preferred for nodeJS
 );
 var config={};
 config.time_limit=1;  //your time limit in integer
@@ -33,7 +33,7 @@ config.language="C/C++/Py/C#"; //optional choose any one of them or none
 ```
 <h1>Compile Your code</h1>
 
-```
+``` javascript
 //compile your code 
 hackerEarth.compile(config,function(err,response){
       if(err)
@@ -43,11 +43,11 @@ hackerEarth.compile(config,function(err,response){
         console.log(JSON.parse(res).compile_status);  //you can use it in your own way
 });
 
-
+```
 
 <h1>Run Your Code</h1>
 
-```
+``` javascript
 //Run a source code against a input
 
 hackerEarth.run(config,function(err,response){
