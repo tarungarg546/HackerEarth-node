@@ -32,33 +32,57 @@ config.language="C/C++/Py/C#"; //optional choose any one of them or none
 
 ```
 <h1>Compile Your code</h1>
+  - Using Callbacks
+      ``` javascript
+      //compile your code 
+      hackerEarth.compile(config,function(err,response){
+            if(err) {
+              //deal with error
+            } else {
+              //deal with response
+            }
+      });
 
-``` javascript
-//compile your code 
-hackerEarth.compile(config,function(err,response){
-      if(err)
-        res.send(err);
-      else
-        //deal with response
-        console.log(JSON.parse(res).compile_status);  //you can use it in your own way
-});
+      ```
+  - Using Promises
+      ``` javascript
+      //compile your code 
+      hackerEarth.compile(config)
+                              .then(result => {
+                                //Handle Result
+                              })
+                              .catch(err => {
+                                //Handle Error
+                              });
 
-```
+      ```
+
 
 <h1>Run Your Code</h1>
+- Using Callbacks
+      ``` javascript
+      //compile your code 
+      hackerEarth.run(config,function(err,response){
+            if(err) {
+              //deal with error
+            } else {
+              //deal with response
+            }
+      });
 
-``` javascript
-//Run a source code against a input
+      ```
+  - Using Promises
+      ``` javascript
+      //compile your code 
+      hackerEarth.run(config)
+                          .then(result => {
+                            //Handle Result
+                          })
+                          .catch(err => {
+                            //Handle Error
+                          });
 
-hackerEarth.run(config,function(err,response){
-      if(err)
-        res.send(err);
-      else
-        //deal with response
-        console.log(JSON.parse(res).run_status);  //you can use it in your own way
-});
-
-```
+      ```
 <h1> Todos </h1>
 
 - [x] Use ES6 in source and transpile to babel for older version and put it into distribution/
