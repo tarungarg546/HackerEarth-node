@@ -62,7 +62,7 @@ hackerEarth.run(config,function(err,response){
 <h1> Todos </h1>
 
 - [x] Use ES6 in source and transpile to babel for older version and put it into distribution/
-- [ ] Promisify whole package
+- [x] Promisify whole package
 - [ ] Using travis build tools for testing
 
 <h2> Contact me on</h2>

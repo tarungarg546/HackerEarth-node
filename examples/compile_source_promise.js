@@ -17,10 +17,11 @@ config.source = 'Your Code';
 
 config.input = "5";
 
-hackerEarth.compile(config, (err, res) => {
-    if (err) {
-        console.log(err);
-    }
-    console.log(JSON.parse(res));
-});
+hackerEarth.compile(config)
+						.then((result) => {
+							//deal with result
+						})
+						.catch((err) => {
+							//deal with errr
+						});
 
