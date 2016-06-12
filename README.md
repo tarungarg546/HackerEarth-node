@@ -33,6 +33,7 @@ config.language="C/C++/Py/C#"; //optional choose any one of them or none
 ```
 <h1>Compile Your code</h1>
   - Using Callbacks
+
       ``` javascript
       //compile your code 
       hackerEarth.compile(config,function(err,response){
@@ -44,7 +45,9 @@ config.language="C/C++/Py/C#"; //optional choose any one of them or none
       });
 
       ```
+
   - Using Promises
+
       ``` javascript
       //compile your code 
       hackerEarth.compile(config)
@@ -59,7 +62,8 @@ config.language="C/C++/Py/C#"; //optional choose any one of them or none
 
 
 <h1>Run Your Code</h1>
-- Using Callbacks
+  - Using Callbacks
+
       ``` javascript
       //compile your code 
       hackerEarth.run(config,function(err,response){
@@ -72,6 +76,7 @@ config.language="C/C++/Py/C#"; //optional choose any one of them or none
 
       ```
   - Using Promises
+
       ``` javascript
       //compile your code 
       hackerEarth.run(config)
@@ -83,6 +88,7 @@ config.language="C/C++/Py/C#"; //optional choose any one of them or none
                           });
 
       ```
+
 <h1> Todos </h1>
 
 - [x] Use ES6 in source and transpile to babel for older version and put it into distribution/
