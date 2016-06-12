@@ -45,16 +45,24 @@ class helpers {
     }
 
     doOperation(rpData,callback) {
-        rp(rpData)
-            .then((body) => {
-                return body;
-            })
-            .then((res) => {
-                callback(null,res);
-            })
-            .catch((err) => {
-                callback(err,null);
-            });
+        return new Promise((resolve, reject) => {
+             rp(rpData)
+                    .then((body) => {
+                        return body;
+                    })
+                    .then((res) => {
+                        if(callback) {
+                            callback(null,res);
+                        }
+                        resolve(res);
+                    })
+                    .catch((err) => {
+                        if(callback) {
+                            callback(err,null);
+                        }
+                        reject(err);
+                    });
+        });
     }
 
 }
@@ -86,16 +94,16 @@ class HackerEarth extends helpers {
     }
     compile(config, callback) {
         let data = super.getQueryData(config,this.clientSecret,this.mode);
+        debug("In HackerEarth:Compile Data sent to API is %s",JSON.stringify(data));
         let rpData=super.getRequestPostJSON(data,this.compileURL);
-        super.doOperation(rpData,callback);
-        debug("In HackerEarth:Compile Data sent to API is %s",JSON.stringify(data));    
+        return super.doOperation(rpData,callback);    
     }
 
     run(config, callback) {
         let data = super.getQueryData(config,this.clientSecret,this.mode);
-        let rpData=super.getRequestPostJSON(data,this.runURL);
-        super.doOperation(rpData,callback);
         debug("In HackerEarth:Run Data sent to API is %s",JSON.stringify(data));
+        let rpData=super.getRequestPostJSON(data,this.runURL);
+        return super.doOperation(rpData,callback);
     }
 }
 

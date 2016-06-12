@@ -13,14 +13,14 @@ config.time_limit = 1;
 
 config.memory_limit = 323244;
 
-config.source = 'Your Code'; 
+config.source = 'Your Code';
 
 config.input = "5";
 
-hackerEarth.compile(config, (err, res) => {
-    if (err) {
-        console.log(err);
-    }
-    console.log(JSON.parse(res));
-});
-
+hackerEarth.run(config)
+					.then((res) => {
+						//deal with result
+					})
+					.catch((err) => {
+						//deal with error
+					});
