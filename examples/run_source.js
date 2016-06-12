@@ -13,7 +13,7 @@ config.time_limit = 1;
 
 config.memory_limit = 323244;
 
-config.source = 'Your Code'; //Remember it should be properly formatted
+config.source = 'Your Code'; 
 
 config.input = "5";
 
