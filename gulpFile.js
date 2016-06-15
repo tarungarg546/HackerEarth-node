@@ -1,10 +1,10 @@
 "use strict";
 const gulp = require('gulp');
 const notify = require('gulp-notify');
-const growl = require('gulp-notify-growl');
 const jscs = require('gulp-jscs');
 const jshint = require('gulp-jshint');
 const map = require('map-stream');
+const babel=require('gulp-babel');
 let exitOnJshintError = map( (file, cb) => {
     //console.log("here for file "+file.path);
     if (!file.jshint.success) {
@@ -12,22 +12,29 @@ let exitOnJshintError = map( (file, cb) => {
         process.exit(1);
     }
 });
-gulp.task('jscs', () => {
-    gulp.src([ '*.js',"examples/*.js","source/*.js"])
-        .pipe(jscs());
+gulp.task('transpile',_=> {
+    return gulp.src('source/*.js')
+                .pipe(babel({
+                    presets: ['es2015']
+                }))
+                .pipe(gulp.dest('distribution'));
+});
+gulp.task('jscs',_=> {
+    return gulp.src([ '*.js',"examples/*.js","source/*.js"])
+                .pipe(jscs());
 });
 
-gulp.task('lint', () => {
-    gulp.src([ '*.js',"examples/*.js","source/*.js"])
-        .pipe(jshint())
-        .pipe(jshint.reporter('jshint-stylish'))
-        .pipe(jshint.reporter("fail"));   
+gulp.task('lint',_=> {
+    return gulp.src([ '*.js',"examples/*.js","source/*.js"])
+                .pipe(jshint())
+                .pipe(jshint.reporter('jshint-stylish'))
+                .pipe(jshint.reporter("fail"));   
 });
 
-gulp.task('check', ['jscs', 'lint'], () => {
-    gulp.src('/')
-        .pipe(notify({
-            title: 'Task Builder',
-            message: 'Successfully built application'
-        }));
+gulp.task('check', ['transpile','jscs', 'lint'],_=> {
+    return gulp.src('/')
+                .pipe(notify({
+                    title: 'Task Builder',
+                    message: 'Successfully built application'
+                }));
 });

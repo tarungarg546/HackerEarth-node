@@ -4,7 +4,7 @@
   "description": "nodeJS library for using HackerEarth API",
   "main": "./distribution/index.js",
   "scripts": {
-    "build": "babel source --presets babel-preset-es2015 --out-dir distribution",
+    "build": "gulp check",
     "prepublish": "npm run build",
     "lint": "gulp check",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -34,14 +34,16 @@
     "request-promise": "^3.0.0"
   },
   "devDependencies": {
+    "babel-polyfill": "^6.9.1",
     "babel-preset-es2015": "^6.9.0",
-    "babel-preset-stage-2": "^6.5.0",
     "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
     "gulp-jscs": "^3.0.2",
     "gulp-jscs-stylish": "^1.4.0",
     "gulp-jshint": "^2.0.1",
     "gulp-notify": "^2.2.0",
-    "gulp-notify-growl": "^1.0.2",
-    "jshint-stylish": "^2.2.0"
+    "jshint": "^2.9.2",
+    "jshint-stylish": "^2.2.0",
+    "map-stream": "0.0.6"
   }
 }
