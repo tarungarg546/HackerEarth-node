@@ -1,1 +1,1 @@
-module.exports = require('./hackerEarth-js');
+module.exports = require('./distribution');

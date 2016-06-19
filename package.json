@@ -7,6 +7,10 @@
     "build": "gulp check",
     "prepublish": "npm run build"
   },
+  "files":[
+    "index.js",
+    "distribution/"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/tarungarg546/HackerEarth-node.git"
