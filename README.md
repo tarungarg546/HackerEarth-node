@@ -19,7 +19,7 @@ Using HackerEarth API you can compile and run your code using their [codeTable](
 
 <h1>Set Up</h1>
 
-```
+``` js
 var hackerEarth=require('hackerearth-node'); //require the Library
 //Now set your application 
 var hackerEarth=new hackerEarth(
@@ -33,7 +33,7 @@ config.source='';  //your source code for which you want to use hackerEarth api
 config.input="";  //input against which you have to test your source code
 config.language="C/C++/Py/C#"; //optional choose any one of them or none
 
-```
+``` js
 <h1>Compile Your code</h1>
   - Using Callbacks
 
