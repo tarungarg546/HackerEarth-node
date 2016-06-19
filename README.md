@@ -1,6 +1,6 @@
 # HackerEarth-node
 
-[![npm version](https://badge.fury.io/js/HackerEarth-node.svg)](https://www.npmjs.com/package/hackerearth-node)[![npm](https://img.shields.io/npm/dt/hackerearth-node.svg?maxAge=2592000?style=flat-square)](https://www.npmjs.com/package/hackerearth-node) ![awesome](https://img.shields.io/badge/awesome-yes-green.svg)
+[![npm version](https://badge.fury.io/js/hackerEarth-node.svg)](https://www.npmjs.com/package/hackerearth-node)[![npm](https://img.shields.io/npm/dt/hackerearth-node.svg?style=flat-square)](https://www.npmjs.com/package/hackerearth-node) ![awesome](https://img.shields.io/badge/awesome-yes-green.svg)
   
 
 >Node JS library for using HackerEarth API
