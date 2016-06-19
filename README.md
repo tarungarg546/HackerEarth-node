@@ -1,8 +1,11 @@
 # HackerEarth-node
-nodeJS library for using HackerEarth API
+
+[![npm version](https://badge.fury.io/js/HackerEarth-node.svg)](https://www.npmjs.com/package/HackerEarth-node[![npm](https://img.shields.io/npm/dt/HackerEarth-node.svg?maxAge=2592000?style=flat-square)](https://www.npmjs.com/package/HackerEarth-node) ![awesome](https://img.shields.io/badge/awesome-yes-green.svg)
+  
+
+>Node JS library for using HackerEarth API
 
 This library helps you to compile your code with [HackerEarth API v3](https://www.hackerearth.com/docs/api/developers/code/legacy/)
-This library helps you to compile your code with [HackerEarth API v3!] (https://www.hackerearth.com/docs/api/developers/code/v3/)
 
 Using HackerEarth API you can compile and run your code using their [codeTable](https://code.hackerEarth.com)
 
@@ -88,6 +91,9 @@ config.language="C/C++/Py/C#"; //optional choose any one of them or none
                           });
 
       ```
+
+<h3>Wanna Debug ?</h3>
+>Append `debug=HE` before your node server command or whatever is calling HackerEath-node module.
 
 <h1> Todos </h1>
 

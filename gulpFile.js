@@ -5,13 +5,7 @@ const jscs = require('gulp-jscs');
 const jshint = require('gulp-jshint');
 const map = require('map-stream');
 const babel=require('gulp-babel');
-let exitOnJshintError = map( (file, cb) => {
-    //console.log("here for file "+file.path);
-    if (!file.jshint.success) {
-        console.error('jshint failed for '+file.path);
-        process.exit(1);
-    }
-});
+const files=[ '*.js',"examples/*.js","source/*.js"];
 gulp.task('transpile',_=> {
     return gulp.src('source/*.js')
                 .pipe(babel({
@@ -20,12 +14,12 @@ gulp.task('transpile',_=> {
                 .pipe(gulp.dest('distribution'));
 });
 gulp.task('jscs',_=> {
-    return gulp.src([ '*.js',"examples/*.js","source/*.js"])
+    return gulp.src(files)
                 .pipe(jscs());
 });
 
 gulp.task('lint',_=> {
-    return gulp.src([ '*.js',"examples/*.js","source/*.js"])
+    return gulp.src(files)
                 .pipe(jshint())
                 .pipe(jshint.reporter('jshint-stylish'))
                 .pipe(jshint.reporter("fail"));   

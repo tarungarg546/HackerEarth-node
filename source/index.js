@@ -1,6 +1,7 @@
+'use strict';
 const rp = require('request-promise');
 const debug = require('debug')('HE');
-require("babel-polyfill");
+require('babel-polyfill');
 class helpers {
     constructor() {
 
@@ -92,14 +93,14 @@ class HackerEarth extends helpers {
     }
     compile(config, callback) {
         let data = super.getQueryData(config,this.clientSecret,this.mode);
-        debug("In HackerEarth:Compile Data sent to API is %s",JSON.stringify(data));
+        debug('In HackerEarth:Compile Data sent to API is %s',JSON.stringify(data));
         let rpData = super.getRequestPostJSON(data,this.compileURL);
         return super.doOperation(rpData,callback);    
     }
 
     run(config, callback) {
         let data = super.getQueryData(config,this.clientSecret,this.mode);
-        debug("In HackerEarth:Run Data sent to API is %s",JSON.stringify(data));
+        debug('In HackerEarth:Run Data sent to API is %s',JSON.stringify(data));
         let rpData=super.getRequestPostJSON(data,this.runURL);
         return super.doOperation(rpData,callback);
     }
