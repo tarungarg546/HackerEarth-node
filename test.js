@@ -1,5 +1,5 @@
 import test from 'ava';
-
+/*jshint sub:true*/
 var HE = require('./distribution/');
 
 const hackerEarth = new HE(
@@ -31,11 +31,11 @@ test('should compile  with promise',t => {
   return hackerEarth.compile(config).then(op=>t.is(op.compile_status,"AC"));
 });
 test('should run  with promise',t => {
-  return hackerEarth.run(config).then(op=>t.is(op.run_status.status,"AC"));
+  return hackerEarth.run(config).then(op=>t.is(op.run_status['status'],"AC"));
 });
 
 test('should run with callback',t => {
  return hackerEarth.run(config,(err,op) => {
-    t.is(op.run_status.status,"AC");
+    t.is(op.run_status['status'],"AC");
   });
 });
