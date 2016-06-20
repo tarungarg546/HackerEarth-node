@@ -3,8 +3,7 @@ import test from 'ava';
 var HE = require('./distribution/');
 
 const hackerEarth = new HE(
-    process.env.HE_KEY, //client secret key
-    ''
+    process.env.HE_KEY
 );
 
 const config = {
