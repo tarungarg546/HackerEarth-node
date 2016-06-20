@@ -1,9 +1,10 @@
 import test from 'ava';
-/*jshint sub:true*/
+
 var HE = require('./distribution/');
 
 const hackerEarth = new HE(
-    process.env.HE_KEY
+    process.env.HE_KEY, //client secret key
+    ''
 );
 
 const config = {
@@ -23,18 +24,26 @@ test('should be equal to compile url',t => {
 
 test('should compile  with callback',t => {
   return hackerEarth.compile(config,(err,op) => {
-    t.is(op.compile_status,"AC");
+    const res=JSON.parse(op);
+    t.is(res.compile_status,'OK');
   });
 });
 test('should compile  with promise',t => {
-  return hackerEarth.compile(config).then(op=>t.is(op.compile_status,"AC"));
+  return hackerEarth.compile(config).then(op=> {
+    op=JSON.parse(op);
+    t.is(op.compile_status,'OK');
+  });
 });
 test('should run  with promise',t => {
-  return hackerEarth.run(config).then(op=>t.is(op.run_status['status'],"AC"));
+  return hackerEarth.run(config).then(op=> {
+    op=JSON.parse(op);
+    t.is(op.run_status.status,'AC');
+  });
 });
 
 test('should run with callback',t => {
  return hackerEarth.run(config,(err,op) => {
-    t.is(op.run_status['status'],"AC");
+    const res=JSON.parse(op);
+    t.is(res.run_status.status,'AC');
   });
 });
