@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - 4
+  - 5
+  - 6
+env:
+  secure: "ANHEk54OKqa/4Md/y2f4T1FVrgmXPHG6Wyh5quFrB5zTjxwoONYYkWLdi2BpPwR0s2cRCfM78Ju+NO+dnz6YcAz5ImT4jAvRR4bk9ZBXmdN6O6v28fO74IIhHArBEh5V3hGKemswm6jz/kF7J87FZ66gGdSEaaqHEtrLICxal06YCsHyIYvPTyR9LHzOWBj8bq5c2L/cgDet9A7iHsvN6rm7GYUA9KOCCDbDfy1on+dSPdwBxFDfXnhaqZ9igQEF6SmH+tJutdoq4rGkWsPR3Rc3Ij8gcH1BSzk+dGuZrQNfvnN66DstYgTrYPd5+TVWF1TjrEK7JPQv6Ckchp8sGE/hBFVqOsQEHMX9iE9WTmZ9O4QIDp3d1UxZU0jVZqZkRCrNvVWHpB9a7ks0EA8kL2V6zIp6s+dMkgBYrjte+qyfiuhJ1EgMHOU4JuFOqZfn1jwIK+9lLO1qjnenUBnOp1758nhqeOmdQP7Wr4mdl/hv370S9Xn8XvnDFCeJuZrlQGDJYK0r8ZA6wVhGsElzZQzbuxAvRaay5kgYJBuYS8F+sqoVlM3/gF86Iw7NyhcFNCN4AhYSaZjM6S2wMLKoRKKnJPmrXYjGaDI6d/fNUQ8GScU2Qb1ttmxLFQwINXGkyRygVZoMWEdFPO9hsQemQ+ageErz6yJzbcmfJEY/UwE="
+before_script:
+  - npm install -g gulp
+script: gulp

@@ -4,8 +4,8 @@
   "description": "nodeJS library for using HackerEarth API",
   "main": "./distribution/index.js",
   "scripts": {
-    "build": "gulp check",
-    "prepublish": "npm run build"
+    "test": "gulp ",
+    "prepublish": "npm run test"
   },
   "files": [
     "distribution/"
@@ -13,6 +13,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/tarungarg546/HackerEarth-node.git"
+  },
+  "engines": {
+    "node": ">=4.x.x"
   },
   "keywords": [
     "HackerEarth",
@@ -38,11 +41,11 @@
     "babel-polyfill": "^6.9.1",
     "babel-preset-es2015": "^6.9.0",
     "gulp": "^3.9.1",
+    "gulp-ava": "^0.12.1",
     "gulp-babel": "^6.1.2",
     "gulp-jscs": "^3.0.2",
     "gulp-jscs-stylish": "^1.4.0",
     "gulp-jshint": "^2.0.1",
-    "gulp-notify": "^2.2.0",
     "jshint": "^2.9.2",
     "jshint-stylish": "^2.2.0",
     "map-stream": "0.0.6"
