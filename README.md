@@ -1,5 +1,5 @@
 # HackerEarth-node
-[![NPM](https://nodei.co/npm/hackerearth-node.png)](https://nodei.co/npm/hackerearth-node/) ![awesome](https://img.shields.io/badge/awesome-yes-green.svg)]
+[![NPM](https://nodei.co/npm/hackerearth-node.png)](https://nodei.co/npm/hackerearth-node/) ![awesome](https://img.shields.io/badge/awesome-yes-green.svg)
   
 
 >Node JS library for using HackerEarth API
