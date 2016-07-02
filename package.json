@@ -1,11 +1,11 @@
 {
   "name": "hackerearth-node",
-  "version": "2.3.8",
+  "version": "2.3.9",
   "description": "nodeJS library for using HackerEarth API",
   "main": "./distribution/index.js",
   "scripts": {
     "test": "gulp ",
-    "prepublish":"npm run test"
+    "prepublish": "npm run test"
   },
   "files": [
     "distribution/"
