@@ -1,5 +1,8 @@
 # HackerEarth-node
-[![NPM](https://nodei.co/npm/hackerearth-node.png)](https://nodei.co/npm/hackerearth-node/)<a href="https://hackerearth.com" target="_blank"><img src="https://hackerearth.global.ssl.fastly.net/static/hackerearth/images/badge/HE_badge_on_light.png" alt="Dark badge"></a>![awesome](https://img.shields.io/badge/awesome-yes-green.svg)[![Build Status](https://travis-ci.org/tarungarg546/HackerEarth-node.svg?branch=master)](https://travis-ci.org/tarungarg546/HackerEarth-node)
+
+[![NPM](https://nodei.co/npm/hackerearth-node.png)](https://nodei.co/npm/hackerearth-node/)  <a href="https://hackerearth.com" target="_blank"><img src="https://hackerearth.global.ssl.fastly.net/static/hackerearth/images/badge/HE_badge_on_light.png" alt="Dark badge"></a>
+
+![awesome](https://img.shields.io/badge/awesome-yes-green.svg)[![Build Status](https://travis-ci.org/tarungarg546/HackerEarth-node.svg?branch=master)](https://travis-ci.org/tarungarg546/HackerEarth-node)
   
 
 >Node JS library for using HackerEarth API
