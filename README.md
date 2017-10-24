@@ -95,7 +95,7 @@ config.language="C/C++/Py/C#"; //optional choose any one of them or none
       ```
 
 <h3>Wanna Debug ?</h3>
->Append `debug=HE` before your node server command or whatever is calling HackerEath-node module.
+> Append `debug=HE` before your node server command (or whatever is calling HackerEarth-node module) and analyse the logs printed on commandline to debug.
 
 <h1> Todos </h1>
 
